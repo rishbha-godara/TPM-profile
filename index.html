@@ -12,25 +12,20 @@
             width: 100%;
             overflow: hidden; /* Prevents scrolling */
             background: linear-gradient(to right, #1D1AC4 50%, #054CAC 50%);
-            background-size: 10px 100%; /* Thin stripes (10px wide) */
-        }
-        .pdf-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
+            background-size: 2pt 100%; /* Thin stripes (2pt wide) */
+            background-repeat: repeat-x; /* Repeats the stripes horizontally */
         }
         iframe {
-            width: 80%;
-            height: 90vh; /* Adjust this to make the PDF fit better on the screen */
+            position: absolute; /* Positioning it directly on the background */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
         }
     </style>
 </head>
 <body>
-    <div class="pdf-container">
-        <iframe src="PM-WorkPortfolio.pdf" title="PM Work Portfolio"></iframe>
-    </div>
+    <iframe src="PM-WorkPortfolio.pdf" title="PM Work Portfolio"></iframe>
 </body>
 </html>
