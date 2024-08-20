@@ -14,18 +14,43 @@
             background: linear-gradient(to right, #1D1AC4 50%, #054CAC 50%);
             background-size: 2pt 100%; /* Thin stripes (2pt wide) */
             background-repeat: repeat-x; /* Repeats the stripes horizontally */
+            position: relative; /* Ensures proper positioning context for iframe */
         }
-        iframe {
-            position: absolute; /* Positioned absolutely to fill the viewport */
-            top: 0;
-            left: 0;
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 129.4118%;
+            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
+            margin-top: 1.6em;
+            margin-bottom: 0.9em;
+            overflow: hidden;
+            border-radius: 8px;
+            will-change: transform;
+        }
+        .pdf-container iframe {
+            position: absolute;
             width: 100%;
             height: 100%;
+            top: 0;
+            left: 0;
             border: none;
+            padding: 0;
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <iframe src="PM-WorkPortfolio.pdf" title="PM Work Portfolio" allowfullscreen></iframe>
+    <div class="pdf-container">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAGNzsVBwDw/yjYu7MLyBH9IOIhwdRKePw/view?embed" 
+                allowfullscreen="allowfullscreen" 
+                allow="fullscreen">
+        </iframe>
+    </div>
+    <a href="https://www.canva.com/design/DAGNzsVBwDw/yjYu7MLyBH9IOIhwdRKePw/view?utm_content=DAGNzsVBwDw&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+       target="_blank" 
+       rel="noopener">
+        Blue and White Simple Graphic Design Agency Proposal Cover Page
+    </a>
 </body>
 </html>
