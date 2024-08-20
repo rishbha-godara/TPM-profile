@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work Portfolio</title>
     <style>
         body {
             margin: 0;
@@ -22,12 +23,15 @@
             padding: 1em;
         }
         .container img {
-            width: auto; /* Adjusts width while keeping aspect ratio */
             max-width: 100%;
-            height: auto; /* Keeps the height in proportion to the width */
-            margin-bottom: 1em; /* Spacing between images */
+            height: auto;
+            margin-bottom: 1em;
             border-radius: 8px;
             box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
+            transition: transform 0.2s; /* Smooth zoom effect */
+        }
+        .container img:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
         }
         h1 {
             margin-top: 1em;
