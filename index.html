@@ -5,32 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Work Portfolio</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents scrolling */
+            background: linear-gradient(to right, #1D1AC4 50%, #054CAC 50%);
+            background-size: 40px 100%; /* Adjust the width of the stripes */
+        }
+        .pdf-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background: linear-gradient(to right, #1D1AC4 50%, #054CAC 50%);
-            background-size: 40px 100%; /* Adjust the width of the stripes here */
-        }
-        .container {
-            width: 80%;
-            height: 90%;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: #fff;
+            height: 100%;
+            width: 100%;
         }
         iframe {
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 90vh; /* Adjust this to make the PDF fit better on the screen */
             border: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="pdf-container">
         <iframe src="PM-WorkPortfolio.pdf" title="PM Work Portfolio"></iframe>
     </div>
 </body>
